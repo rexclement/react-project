@@ -1,0 +1,34 @@
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 30px 10px;
+    width: 235px; /* Set the width of the image container */
+
+  }
+  
+  .image-container img {
+    width: 100%; /* Make the image fill the container */
+    height: 275px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  .content-overlay {
+    position: absolute;
+    bottom: 0; /* Position content at the bottom of the image */
+    left: 0;
+    width: 100%;
+    padding: 3px; /* Add some padding for better readability */
+    text-align: center;
+    overflow: hidden;
+    color: white;
+  }
+  h2{
+    font-size: 20px;
+  }
+  #root{
+    display: flex;
+  }
+  .main{
+    background-color:rgb(242, 245, 209);
+  }
