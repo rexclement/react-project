@@ -1,0 +1,264 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+body {
+    background: linear-gradient(to right, #c3c3c3 0%, #cecae8 100%);
+    font-size: 12px;
+}
+  
+body, button, input, textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+  
+.background {
+    display: flex;
+    min-height: 100vh;
+}
+  
+.container {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+}
+  
+.screen {
+    position: relative;
+    background: white;
+    border-radius: 15px;
+}
+  
+.screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+}
+  
+.screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #002366;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+  
+.screen-header-left {
+    margin-right: auto;
+}
+  
+.screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: white;
+}
+  
+.screen-header-button.close {
+    background: #049dea;
+}
+  
+.screen-header-button.maximize {
+    background: #e8e925;
+}
+  
+.screen-header-button.minimize {
+    background: #74c54f;
+}
+  
+.screen-header-right {
+    display: flex;
+}
+  
+.screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background: #999;
+}
+  
+.screen-body {
+    display: flex;
+}
+  
+.screen-body-item {
+    flex: 1;
+    padding: 50px;
+}
+  
+.screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+}
+  
+.app-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color:#002366;
+    font-size: 26px;
+}
+  
+.app-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #002366;
+    animation: underline 1.5s ease-in-out infinite;
+}
+
+@keyframes underline {
+    0%, 100% { width: 25px; }
+    50% { width: 60px; }
+}
+  
+.app-contact {
+    margin-top: auto;
+    font-size: 14px;
+    color: #002366;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    background: #f4f4f8; /* Light background to make it stand out */
+    padding: 10px 15px; /* Add padding for a cleaner look */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    display: inline-block; /* Fits content nicely */
+    transition: all 0.3s ease; /* Smooth transition */
+    text-align: center;
+  
+}
+
+.app-contact:hover {
+    background: #e9e9f5; /* Slightly different shade on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
+    color: #b9134f; /* Change text color on hover */
+    text-decoration: underline; /* Underline to highlight interactivity */
+}
+
+  
+.app-form-group {
+    margin-bottom: 15px;
+}
+  
+.app-form-group.message {
+    margin-top: 40px;
+}
+  
+.app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+}
+  
+.app-form-control {
+    width: 100%;
+    padding: 10px 0; /* Same vertical padding as other inputs */
+    background: none;
+    border: none;
+    border-bottom: 1px solid #002366; /* Bottom border color */
+    color: black; /* Text color */
+    font-size: 14px; /* Same font size */
+    text-transform: uppercase;
+    outline: none; /* No outline */
+    transition: border-color .2s; /* Transition for border color change */
+}
+  
+.app-form-control::placeholder {
+    color: #002366; /* Same placeholder color */
+}
+  
+.app-form-control:focus {
+    border-bottom-color: #002366; /* Change bottom border color on focus */
+}
+  
+.app-form-button {
+    background: none;
+    border: none;
+    color: #002366;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+  
+.app-form-button:hover {
+    color: #b9134f;
+}
+  
+.credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: #002366;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+  
+.credits-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+.dribbble {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+  
+@media screen and (max-width: 520px) {
+    .screen-body {
+        flex-direction: column;
+    }
+  
+    .screen-body-item.left {
+        margin-bottom: 30px;
+    }
+  
+    .app-title {
+        flex-direction: row;
+    }
+  
+    .app-title span {
+        margin-right: 12px;
+    }
+  
+    .app-title:after {
+        display: none;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .screen-body {
+        padding: 40px;
+    }
+  
+    .screen-body-item {
+        padding: 0;
+    }
+}
+
+/* Style for the message textarea */
+.app-form-group.message textarea.app-form-control {
+    resize: vertical; /* Allow vertical resizing only */
+    height: 80px; /* Set default height */
+}
